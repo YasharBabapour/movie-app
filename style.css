@@ -1,0 +1,86 @@
+:root{
+    --main-color: #86A3C3;
+    --second-color: #7268A6;
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    background-color: var(--main-color);
+    
+}
+*{
+    box-sizing: border-box;
+}
+header{
+    padding: 1em 1em;
+    background-color: var(--second-color);
+    display: flex;
+}
+form{
+    margin-left: auto;
+}
+form input{
+    padding: 0.5em 1em;
+    margin-left: auto;
+    border-radius: 30px;
+    border: 1px solid var(--main-color);
+    background-color: transparent;
+    outline: 0;
+}
+header input:focus{
+    background-color: var(--main-color);
+    
+}
+header input::placeholder{
+    color: white;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+main img{
+    width: 100%;
+}
+.movie{
+    width: 300px;
+    position: relative;
+    background-color: var(--second-color);
+    overflow-y: hidden;
+    margin: 0.5em 1em;
+}
+.movie img{
+    width: 100%;
+}
+
+.caption{
+    display: flex;
+    flex-direction: row;
+    padding: 0.5em 1em;
+    justify-content: space-between;
+    color: white;
+}
+.caption h3{
+    margin: 0;
+}
+.caption span{
+    padding: 0.2em 1em;
+    background-color: var(--main-color);
+    border-radius: 5px;
+}
+.overView{
+    padding: 0.5em 1em;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(101%);
+    transition: transform 0.5s ease-in-out;
+}
+.movie:hover .overView{
+    transform: translateY(0);
+}
